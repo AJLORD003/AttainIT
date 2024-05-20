@@ -1,0 +1,23 @@
+CREATE TABLE COURSE_DETAILS(Course_Key int AUTO_INCREMENT PRIMARY KEY, Institute varchar(200) NOT NULL, Academic_Year varchar(30) NOT NULL, Semester int NOT NULL, Branch varchar(10) NOT NULL, NBA_Code varchar(6) NOT NULL, Course_Name varchar(100) NOT NULL, Course_Code varchar(15) NOT NULL, Course_Coordinator varchar(200) NOT NULL, emp_id int NOT NULL);
+
+CREATE TABLE QUESTION_DETAILS(Course_Key int NOT NULL, Test varchar(20) NOT NULL, Question varchar(3) NOT NULL, Question_CO varchar(10) NOT NULL, Question_Marks int NOT NULL, Description varchar(30));
+
+CREATE TABLE NBA_RECORDS(Course_Key int NOT NULL, Roll_no varchar(15) NOT NULL, Student_Name Varchar(50) NOT NULL, Batch varchar(10) NOT NULL, Test varchar(20) NOT NULL, Q1 int, Q2 int, Q3 int, Q4 int, Q5 int, Q6 int, Q7 int, Q8 int, Q9 int, Q10 int, Total int, CO1 int, CO2 int, CO3 int, CO4 int, CO5 int, CO6 int, CO7 int, CO8 int, CO9 int, CO10 int, CO1_Max int, CO2_Max int, CO3_Max int, CO4_Max int, CO5_Max int, CO6_Max int, CO7_Max int, CO8_Max int, CO9_Max int, CO10_Max int, CO1_Percent int, CO2_Percent int, CO3_Percent int, CO4_Percent int, CO5_Percent int, CO6_Percent int, CO7_Percent int, CO8_Percent int, CO9_Percent int, CO10_Percent int);
+
+CREATE TABLE NBA_RECORDS(Course_Key INT NOT NULL, Roll_no VARCHAR(15) NOT NULL, Student_Name VARCHAR(50) NOT NULL, Batch VARCHAR(10) NOT NULL, Test VARCHAR(20) NOT NULL, Q1 FLOAT, Q2 FLOAT, Q3 FLOAT, Q4 FLOAT, Q5 FLOAT, Q6 FLOAT, Q7 FLOAT, Q8 FLOAT, Q9 FLOAT, Q10 FLOAT, Q11 FLOAT, Q12 FLOAT, Q13 FLOAT, Q14 FLOAT, Q15 FLOAT, Total FLOAT, CO1 FLOAT, CO2 FLOAT, CO3 FLOAT, CO4 FLOAT, CO5 FLOAT, CO6 FLOAT, CO7 FLOAT, CO8 FLOAT, CO9 FLOAT, CO10 FLOAT, CO1_Max FLOAT, CO2_Max FLOAT, CO3_Max FLOAT, CO4_Max FLOAT, CO5_Max FLOAT, CO6_Max FLOAT, CO7_Max FLOAT, CO8_Max FLOAT, CO9_Max FLOAT, CO10_Max FLOAT, CO1_Percent DOUBLE, CO2_Percent DOUBLE, CO3_Percent DOUBLE, CO4_Percent DOUBLE, CO5_Percent DOUBLE, CO6_Percent DOUBLE, CO7_Percent DOUBLE, CO8_Percent DOUBLE, CO9_Percent DOUBLE, CO10_Percent DOUBLE);
+
+CREATE TABLE FINAL_ATTAINMENT(Course_Key INT NOT NULL, Test VARCHAR(20), CO VARCHAR(10), Student_Num INT, Student_Percent FLOAT, CO_Level INT, Total_Students INT, Student_Appeared INT);
+
+CREATE TABLE COURSES(Course_Code varchar(15), Course_Name varchar(100), Course_Coordinator varchar(200), Course_Credits int);
+
+CREATE TABLE USERS(Users_Key int AUTO_INCREMENT PRIMARY KEY, User_Name varchar(50) NOT NULL, Email varchar(150) NOT NULL, User_Password varchar(255) NOT NULL, Admin bool NOT NULL, Block bool NOT NULL);
+
+CREATE TABLE NBA_Feedback_RECORDS(Course_Key int NOT NULL, Roll_no varchar(15) NOT NULL, Student_Name Varchar(50) NOT NULL, Batch varchar(10) NOT NULL, CO1 int, CO2 int, CO3 int, CO4 int, CO5 int, CO6 int, CO7 int, CO8 int, CO9 int, CO10 int);
+
+CREATE TABLE CO_MAP(Course_Code varchar(15), CO VARCHAR(10), PO1 int, PO2 int, PO3 int, PO4 int, PO5 int, PO6 int, PO7 int, PO8 int, PO9 int, PO10 int, PO11 int, PO12 int, PSO1 int, PSO2 int);
+
+CREATE TABLE COURSES(Course_Code varchar(15), Course_Name varchar(100), Course_Coordinator varchar(350), Course_Credits int, Credits int, contact_hours varchar(8), Course_Teacher varchar(750));
+
+CREATE TABLE course_module(Course_Code varchar(15),module_no int, Title varchar(100), content varchar(750), lectures int)
+
+CREATE TABLE Books(Course_Code varchar(15),book_no int, content varchar(350), type varchar(15));
